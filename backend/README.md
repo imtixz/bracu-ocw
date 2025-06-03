@@ -1,8 +1,10 @@
-alembic commands
+relevant commands
 
-alembic init migrations
-alembic revision --autogenerate
-alembic upgrade head
+create migration:
+```alembic revision --autogenerate```
 
-start project with
-uvicorn src.main:app
+apply migration:
+```alembic upgrade head```
+
+start project with:
+```uvicorn src.main:app```
