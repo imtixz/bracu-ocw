@@ -1,0 +1,7 @@
+{
+  "include": ["src"],
+  "exclude": ["migrations", "**/__pycache__"],
+  "ignore": ["migrations"],
+  "typeCheckingMode": "strict",
+  "reportMissingTypeStubs": false
+}
