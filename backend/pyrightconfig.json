@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+  "include": ["app"],
   "exclude": ["migrations", "**/__pycache__"],
   "ignore": ["migrations"],
   "typeCheckingMode": "strict",

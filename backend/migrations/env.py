@@ -12,8 +12,8 @@ from src.models import Course, Document, PairDocument
 # access to the values within the .ini file in use.
 config = context.config
 
-DB_PATH = str((Path().parent / 'db.sqlite3').resolve())
-config.set_main_option('sqlalchemy.url', f"sqlite:///{DB_PATH}")
+DB_PATH = str((Path().parent / "db.sqlite").resolve())
+config.set_main_option("sqlalchemy.url", f"sqlite:///{DB_PATH}")
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
@@ -70,9 +70,7 @@ def run_migrations_online() -> None:
     )
 
     with connectable.connect() as connection:
-        context.configure(
-            connection=connection, target_metadata=target_metadata
-        )
+        context.configure(connection=connection, target_metadata=target_metadata)
 
         with context.begin_transaction():
             context.run_migrations()
