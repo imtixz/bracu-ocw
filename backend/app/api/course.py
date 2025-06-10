@@ -12,8 +12,6 @@ router = APIRouter(prefix="/course", tags=["course"])
 async def courses(
     department: Department | None = None, session: Session = Depends(db.get_session)
 ) -> list[Course]:
-    # get all courses???
-    # but only the search-result kinda data
     course_list = list(session.exec(select(Course)).all())
 
     if department:
@@ -39,3 +37,8 @@ async def create_course(
     session.refresh(course)
 
     return course
+
+
+@router.patch("/")
+async def update_course():
+    pass
