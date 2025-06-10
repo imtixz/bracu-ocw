@@ -1,7 +1,7 @@
 from sqlmodel import create_engine, Session
 from redis import Redis
+from app.core.config import settings
 
-DATABASE_URL = "sqlite:///db.sqlite"
 REDIS_HOST = "localhost"
 REDIS_PORT = 6379
 
@@ -24,7 +24,7 @@ class DatabaseConnection:
 
     def init_db(self):
         if self.db is None:
-            self.db = create_engine(DATABASE_URL, echo=True)
+            self.db = create_engine(settings.DATABASE_URL, echo=True)
 
         if self.redis is None:
             self.redis = Redis(host=REDIS_HOST, port=REDIS_PORT, decode_responses=True)

@@ -3,17 +3,23 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from sqlmodel import SQLModel
-from pathlib import Path
+
+from dotenv import load_dotenv
+import os
+
 from alembic import context
 
-from src.models import Course, Document, PairDocument
+from app.models import Course, Document, PairDocument  # type: ignore
+
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
+load_dotenv()
 
-DB_PATH = str((Path().parent / "db.sqlite").resolve())
-config.set_main_option("sqlalchemy.url", f"sqlite:///{DB_PATH}")
+db_url = os.environ.get("DATABASE_URL", "")
+print(db_url, "THIS IS THE DB URL")
+config.set_main_option("sqlalchemy.url", db_url)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
