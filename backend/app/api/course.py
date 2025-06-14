@@ -29,6 +29,7 @@ async def create_course(
     course = Course(
         title=course_data.title,
         code=course_data.code,
+        description=None,
         department=course_data.department,
     )
     session.add(course)
@@ -41,4 +42,22 @@ async def create_course(
 
 @router.patch("/")
 async def update_course():
+    pass
+
+
+@router.get("/resources")
+async def get_course_resources():
+    pass
+
+
+@router.post("/resource")
+async def add_course_resource():
+    # adds a resource to the course
+    pass
+
+
+@router.delete("/resource")
+async def remove_course_resource():
+    # has to be a mod
+    # should accept resource id or sth (along with type)
     pass

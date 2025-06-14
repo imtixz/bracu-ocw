@@ -9,6 +9,8 @@ import os
 
 from alembic import context
 
+# alembic needs all the used models to be imported in this
+# file to acknowledge them during migraiton file generation
 from app.models import Course, Document, PairDocument  # type: ignore
 
 

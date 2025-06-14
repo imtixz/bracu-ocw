@@ -6,7 +6,7 @@ export default function FilterSection() {
         <p className="text-lg font-bold">Department</p>
         <div className="flex flex-row gap-x-2">
           <input type="checkbox" />
-          <p>Computer Science & Engineering</p>
+          <p>Architecture</p>
         </div>
         <div className="flex flex-row gap-x-2">
           <input type="checkbox" />
@@ -14,7 +14,43 @@ export default function FilterSection() {
         </div>
         <div className="flex flex-row gap-x-2">
           <input type="checkbox" />
+          <p>Biotechnology</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
+          <p>Computer Science & Engineering</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
+          <p>Economics</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
+          <p>Electrical Engineering</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
+          <p>English</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
+          <p>General Education</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
+          <p>Law</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
           <p>Mathetmatics</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
+          <p>Microbiology</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
+          <p>Pharmacy</p>
         </div>
         <div className="flex flex-row gap-x-2">
           <input type="checkbox" />
@@ -25,11 +61,19 @@ export default function FilterSection() {
         <p className="text-lg font-bold">Features</p>
         <div className="flex flex-row gap-x-2">
           <input type="checkbox" />
-          <p>Lecture Video</p>
+          <p>Assignments</p>
         </div>
         <div className="flex flex-row gap-x-2">
           <input type="checkbox" />
-          <p>Lecture Notes</p>
+          <p>Books</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
+          <p>Exams</p>
+        </div>
+        <div className="flex flex-row gap-x-2">
+          <input type="checkbox" />
+          <p>Lecture Videos</p>
         </div>
         <div className="flex flex-row gap-x-2">
           <input type="checkbox" />
@@ -37,11 +81,11 @@ export default function FilterSection() {
         </div>
         <div className="flex flex-row gap-x-2">
           <input type="checkbox" />
-          <p>Slides</p>
+          <p>Readings</p>
         </div>
         <div className="flex flex-row gap-x-2">
           <input type="checkbox" />
-          <p>Exams</p>
+          <p>Slides</p>
         </div>
       </div>
     </div>

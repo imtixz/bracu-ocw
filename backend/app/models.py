@@ -28,17 +28,28 @@ class SemesterSeason(Enum):
 class CourseBase(SQLModel):
     title: str
     code: str
+    description: Optional[str]
     department: Department
 
 
 class Course(CourseBase, table=True):
     id: int | None = Field(default=None, primary_key=True)
+    tags: list["Tag"] = Relationship(back_populates="course")
     documents: list["Document"] = Relationship(back_populates="course")
     pair_documents: list["PairDocument"] = Relationship(back_populates="course")
 
 
 class CourseCreate(CourseBase):
     pass
+
+
+class TagBase(SQLModel):
+    name: str
+
+
+class Tag(TagBase):
+    id: int | None = Field(default=None, primary_key=True)
+    course: Course = Relationship(back_populates="tags")
 
 
 class DocumentType(Enum):
